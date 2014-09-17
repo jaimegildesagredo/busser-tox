@@ -18,7 +18,6 @@ module Busser
     class Tox < Base
       postinstall do
         ensure_pip
-        pip_install('setuptools')
         pip_install('tox')
       end
 
