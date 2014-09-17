@@ -1,0 +1,20 @@
+language: ruby
+
+rvm:
+  - 2.1.0
+  - 2.0.0
+  - 1.9.3
+  - 1.9.2
+  - ruby-head
+
+before_install:
+  - sudo pip uninstall -y pip
+  - mkdir -p ~/.pip
+  - echo -e '[install]\nuser = true' > ~/.pip/pip.conf
+
+script:
+  - PATH=~/.local/bin:$PATH bundle exec rake
+
+matrix:
+  allow_failures:
+  - rvm: ruby-head
