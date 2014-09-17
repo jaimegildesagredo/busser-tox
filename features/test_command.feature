@@ -15,6 +15,7 @@ Feature: Test command
     envlist = py27
 
     [testenv]
+    sitepackages = True
     deps = mamba
     commands = mamba
     """
