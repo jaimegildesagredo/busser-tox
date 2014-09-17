@@ -23,7 +23,6 @@ module Busser
 
       def test
         tox_ini = File.join(suite_path('tox').to_s, 'tox.ini')
-        info 'Running tox ...'
         run!("tox -c #{tox_ini}")
       end
     end
